@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PSC Result</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_primary_result">Primary Result</string>
+	 <string name="title_ebtedae_result">Ebtedae Result</string>
+</resources>
