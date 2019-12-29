@@ -16,13 +16,15 @@ public class EbtedaeActivity extends Activity {
 	
 	
 	TextView div_name,dis_name,tha_name,sch_name,sch_type,stu_roll,fat_name,mot_name,stu_name,scholar_status;
-	TextView banGrade,engGrade,mathGrade,bdIntGrade,sciGrade,relGrade,avgGrade;
+	TextView textNumber1,textGrade1,textNumber2,textGrade2,textNumber3,textGrade3,textNumber4,textGrade4,textNumber5,textGrade5,
+			textNumber6,textGrade6,textTotalGrade,textTotalNumber;
 	Intent intent;
 	public String div_val,tha_val,dis_val,roll_val,sub1_val,sub2_val,sub3_val,
 	sub4_val,sub5_val,sub6_val,avgpoint_val,stuName,sclName,sclType,fatherName,motherName,scholarStatus;
 //private int roll_val;
 	private String exam_type;
-	
+	private String number1,number2,number3,number4,number5,number6,TOTAL;
+
 	
 	
 	@Override
@@ -51,9 +53,21 @@ public class EbtedaeActivity extends Activity {
 		sub4_val=intent.getStringExtra("SUB4");
 		sub5_val=intent.getStringExtra("SUB5");
 		sub6_val=intent.getStringExtra("SUB6");
-		avgpoint_val=intent.getStringExtra("AVGPOINT");
+		//avgpoint_val=intent.getStringExtra("AVGPOINT");
 /*		sub1_val=intent.getStringExtra("SUB1");
 		sub1_val=intent.getStringExtra("SUB1");*/
+
+
+
+		number1 = intent.getStringExtra("SUBn1");
+		number2 = intent.getStringExtra("SUBn2");
+		number3 = intent.getStringExtra("SUBn3");
+		number4 = intent.getStringExtra("SUBn4");
+		number5 = intent.getStringExtra("SUBn5");
+		number6 = intent.getStringExtra("SUBn6");
+
+		avgpoint_val = intent.getStringExtra("AVGPOINT");
+		TOTAL = intent.getStringExtra("TOTAL");
 		
 		
 		div_name=(TextView) findViewById(R.id.textDivision);
@@ -66,14 +80,32 @@ public class EbtedaeActivity extends Activity {
 		fat_name=(TextView) findViewById(R.id.textFatName);
 		mot_name=(TextView) findViewById(R.id.textMotName);
 	//	scholar_status=(TextView) findViewById(R.id.tvScholarship);
-				
-		banGrade=(TextView) findViewById(R.id.textBanGrade);
-		engGrade=(TextView) findViewById(R.id.textEngGrade);
-		mathGrade=(TextView) findViewById(R.id.textMathGrade);
-		bdIntGrade=(TextView) findViewById(R.id.textBanIntGrade);
-		sciGrade=(TextView) findViewById(R.id.textSciGrade);
-		relGrade=(TextView) findViewById(R.id.textRelGrade);
-		avgGrade=(TextView) findViewById(R.id.textTotalGrade);
+
+		textNumber1=(TextView) findViewById(R.id.textNumber1);
+		textGrade1=(TextView) findViewById(R.id.textGrade1);
+
+		textNumber2=(TextView) findViewById(R.id.textNumber2);
+		textGrade2=(TextView) findViewById(R.id.textGrade2);
+
+		textNumber3=(TextView) findViewById(R.id.textNumber3);
+		textGrade3=(TextView) findViewById(R.id.textGrade3);
+
+		textNumber4=(TextView) findViewById(R.id.textNumber4);
+		textGrade4=(TextView) findViewById(R.id.textGrade4);
+
+		textNumber5=(TextView) findViewById(R.id.textNumber5);
+		textGrade5=(TextView) findViewById(R.id.textGrade5);
+
+		textNumber6=(TextView) findViewById(R.id.textNumber6);
+		textGrade6=(TextView) findViewById(R.id.textGrade6);
+
+
+		textTotalGrade=(TextView) findViewById(R.id.textTotalGrade);
+		textTotalNumber=(TextView) findViewById(R.id.textTotalNumber);
+
+
+
+
 		
 		if(div_val!=null){
 			div_name.setText(div_val);
@@ -133,41 +165,91 @@ public class EbtedaeActivity extends Activity {
 			Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
 		}
 		if(sub1_val!=null){
-			banGrade.setText(sub1_val);
+			textGrade1.setText(sub1_val);
 		}else {
 			Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
 		}
 		if(sub2_val!=null){
-			engGrade.setText(sub2_val);
+			textGrade2.setText(sub2_val);
 		}else {
 			Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
 		}
 		if(sub3_val!=null){
-			mathGrade.setText(sub3_val);
+			textGrade3.setText(sub3_val);
 		}else {
 			Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
 		}
 		if(sub4_val!=null){
-			bdIntGrade.setText(sub4_val);
+			textGrade4.setText(sub4_val);
 		}else {
 			Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
 		}
 		if(sub5_val!=null){
-			sciGrade.setText(sub5_val);
+			textGrade5.setText(sub5_val);
 		}else {
 			Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
 		}
 		if(sub6_val!=null){
-			relGrade.setText(sub6_val);
+			textGrade6.setText(sub6_val);
 		}else {
 			Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
 		}
-		if(avgpoint_val!=null){
-			avgGrade.setText(avgpoint_val);
-		}else {
+
+
+
+
+		if (number1 != null) {
+			textNumber1.setText(number1);
+		} else {
+			//Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
+		}
+
+		if (number2 != null) {
+			textNumber2.setText(number2);
+		} else {
+			//Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
+		}
+
+		if (number3 != null) {
+			textNumber3.setText(number3);
+		} else {
+			//Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
+		}
+
+		if (number4 != null) {
+			textNumber4.setText(number4);
+		} else {
+			//Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
+		}
+
+
+		if (number5 != null) {
+			textNumber5.setText(number5);
+		} else {
+			//Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
+		}
+
+		if (number6 != null) {
+			textNumber6.setText(number6);
+		} else {
+			//Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
+		}
+
+
+		if (avgpoint_val != null) {
+			textTotalGrade.setText("জি পি এ: " + avgpoint_val);
+		} else {
 			Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
 		}
-		
+
+
+		if (TOTAL != null) {
+
+			textTotalNumber.setText("মোট : " + TOTAL);
+
+		} else {
+			Toast.makeText(getApplicationContext(), "EMPTY DATA!!", Toast.LENGTH_LONG).show();
+		}
 	
 //		Toast.makeText(getApplicationContext(),"SUB1 VALUE :"+ sub1_val, Toast.LENGTH_LONG).show();
 		/*		Toast.makeText(getApplicationContext(), div_val, Toast.LENGTH_LONG).show();

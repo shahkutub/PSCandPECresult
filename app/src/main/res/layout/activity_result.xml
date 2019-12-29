@@ -330,7 +330,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="bangla"
+                            android:text=""
                             android:textAppearance="?android:attr/textAppearanceMedium" />
 
                         <TextView
