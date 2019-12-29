@@ -336,6 +336,7 @@
 				android:id="@+id/textGrade1"
 				android:layout_width="0dp"
 				android:layout_weight="1"
+                android:gravity="center"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -371,6 +372,7 @@
 				android:id="@+id/textGrade2"
 				android:layout_width="0dp"
 				android:layout_weight="1"
+                android:gravity="center"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -438,6 +440,7 @@
 				android:id="@+id/textGrade3"
 				android:layout_width="0dp"
 				android:layout_weight="1"
+                android:gravity="center"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -473,6 +476,7 @@
 				android:id="@+id/textGrade4"
 				android:layout_width="0dp"
 				android:layout_weight="1"
+                android:gravity="center"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -508,6 +512,7 @@
 				android:id="@+id/textGrade5"
 				android:layout_width="0dp"
 				android:layout_weight="1"
+                android:gravity="center"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -544,6 +549,7 @@
 				android:id="@+id/textGrade6"
 				android:layout_width="0dp"
 				android:layout_weight="1"
+                android:gravity="center"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceMedium" />
 			
